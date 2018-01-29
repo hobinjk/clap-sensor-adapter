@@ -1,0 +1,6 @@
+*.swp
+*.tgz
+*~
+SHA256SUMS
+input.wav
+node_modules
