@@ -10,7 +10,7 @@ Installation
 ```shell
 sudo apt install sox
 
-cd ~/mozilla-iot/gateway/src/addons
+cd ~/.mozilla-iot/addons
 git clone https://github.com/hobinjk/clap-sensor-adapter
 cd clap-sensor-adapter
 npm install
