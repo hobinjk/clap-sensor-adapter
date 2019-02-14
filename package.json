@@ -33,6 +33,6 @@
     "exec": "{nodeLoader} {path}"
   },
   "dependencies": {
-    "clap-detector": "^0.4.1"
+    "clap-detector": "^0.5.1"
   }
 }
