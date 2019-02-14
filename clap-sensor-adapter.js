@@ -24,9 +24,9 @@ try {
   Property = gwa.Property;
 }
 
-var clapDetector = require('clap-detector');
+const ClapDetector = require('clap-detector').default;
 // Start clap detection
-clapDetector.start();
+const clapDetector = new ClapDetector();
 
 class ActiveProperty extends Property {
   constructor(device, name, propertyDescription) {
@@ -36,13 +36,16 @@ class ActiveProperty extends Property {
     this.setCachedValue(propertyDescription.value);
     this.device.notifyPropertyChanged(this);
 
-    clapDetector.onClap(function() {
+    this.onClap = () => {
       console.log('clap!');
       this.value = !this.value;
       this.setCachedValue(this.value);
 
       this.device.notifyPropertyChanged(this);
-    }.bind(this));
+      clapDetector.addClapsListener(this.onClap, {number: 1});
+    };
+
+    clapDetector.addClapsListener(this.onClap, {number: 1});
   }
 
   /**
