@@ -1,5 +1,6 @@
 {
   "name": "clap-sensor-adapter",
+  "display_name": "Clap Sensor",
   "version": "0.1.0",
   "description": "Clap sensing adapter plugin for Mozilla IoT Gateway",
   "main": "index.js",
@@ -8,6 +9,7 @@
     "iot",
     "adapter"
   ],
+  "author": "hobinjk@gmail.com",
   "homepage": "https://github.com/mozilla-iot/example-adapter",
   "license": "MPL-2.0",
   "repository": {
